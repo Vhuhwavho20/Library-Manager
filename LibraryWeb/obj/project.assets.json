@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vhuhw\\LibraryManager\\LibraryWeb\\LibraryWeb.csproj",
+      "projectUniqueName": "C:\\Users\\vhuhw\\LibraryProj\\Library-Manager\\LibraryWeb\\LibraryWeb.csproj",
       "projectName": "LibraryWeb",
-      "projectPath": "C:\\Users\\vhuhw\\LibraryManager\\LibraryWeb\\LibraryWeb.csproj",
+      "projectPath": "C:\\Users\\vhuhw\\LibraryProj\\Library-Manager\\LibraryWeb\\LibraryWeb.csproj",
       "packagesPath": "C:\\Users\\vhuhw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vhuhw\\LibraryManager\\LibraryWeb\\obj\\",
+      "outputPath": "C:\\Users\\vhuhw\\LibraryProj\\Library-Manager\\LibraryWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vhuhw\\AppData\\Roaming\\NuGet\\NuGet.Config"
