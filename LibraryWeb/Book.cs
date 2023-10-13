@@ -26,11 +26,11 @@ public string getTitle(){
     return book_title;
 }
 
-public int getAuthor(){
+public string getAuthor(){
     return book_author;
 }
 
-public int getStatus(){
+public string getStatus(){
     return status;
 }
 
