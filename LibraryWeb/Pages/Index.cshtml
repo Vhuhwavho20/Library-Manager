@@ -8,7 +8,7 @@
 .button {
 background-color: #2357e7;
 border: none;
-color: white;
+color: rgb(0, 0, 0);
 padding: 25px 42px;
 text-align: center;
 text-decoration: none;
@@ -26,6 +26,10 @@ cursor: pointer;
     <h2 class="h2">Select the appropriate identifier for you</h2>
     <br>
     <br>
-    <button class ="button">Librarian</button>
-    <button class = "button">Borrower</button>
+    <label class = "button">
+        <a class="nav-link text-dark" asp-area="" asp-page="/Librarian">Librarian</a>
+    </label>
+    <label class = "button">
+        <a class="nav-link text-dark" asp-area="" asp-page="/Librarian">Borrower</a>
+    </label>
 </div>
