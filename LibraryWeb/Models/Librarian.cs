@@ -1,11 +1,13 @@
+using System.ComponentModel.DataAnnotations;
 namespace LibraryWeb.Models;
 
 public class Librarian{
 
 public int librarian_id{get;set;}
 
-public required string fullname{get;set;}
+[Required]
+public string? fullname{get;set;}
 
-public required string password {get;set;}
+public string? password {get;set;}
 
 }
