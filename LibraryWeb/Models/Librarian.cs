@@ -3,7 +3,7 @@ namespace LibraryWeb.Models;
 
 public class Librarian{
 
-public int librarian_id{get;set;}
+public int Id{get;set;}
 
 [Required]
 public string? fullname{get;set;}
