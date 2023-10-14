@@ -1,3 +1,5 @@
+namespace LibraryWeb.Models;
+
 public class Librarian{
 
 public int librarian_id{get;set;}
