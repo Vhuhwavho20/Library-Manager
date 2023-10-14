@@ -1,19 +1,9 @@
 public class Librarian{
-    int librarian_id;
-    string fullname;
-    string password;
 
+public int librarian_id{get;set;}
 
-public Librarian(int id,string name,string pword){
-librarian_id = id;
-fullname = name;
-password = pword;
-}
+public required string fullname{get;set;}
 
-public void login(string enteredpassword){
-    
-}
-
-
+public required string password {get;set;}
 
 }
