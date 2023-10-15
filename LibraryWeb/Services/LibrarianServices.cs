@@ -31,7 +31,7 @@ public class LibrarianService
             }
         }
 
-        public void DeletePizza(int id)
+        public void DeleteLibrarian(int id)
         {
             if (_context.Librarians != null)
             {
