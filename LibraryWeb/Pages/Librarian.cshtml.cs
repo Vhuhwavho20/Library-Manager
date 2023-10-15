@@ -28,13 +28,13 @@ namespace LibraryWeb.Pages
     }
     List<Librarian> librarians = _service.GetLibrarians().ToList();
     for(int i = 0; i < librarians.Count; i++){
-        if(name==librarians[i].fullname){
-            Console.WriteLine("Log In successful");
+        if(name==librarians[i].fullname && pw==librarians[i].password){
+            return RedirectToPage("/LPortal");
         }
     }
 
     
-    return Redirect("https://example.com");
+    return Page();
 }
 
         public void OnGet()
