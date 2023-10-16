@@ -3,3 +3,10 @@
 @{
     ViewData["Title"] = "LIBRARY MANAGER-INVENTORY";
 }
+
+
+<div class="text-center">
+    @foreach(var book in Model.BookList){
+        <p>@book.book_title</p>
+    }
+</div>
