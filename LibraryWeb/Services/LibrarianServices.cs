@@ -12,6 +12,16 @@ public class LibrarianService
         {
             _context = context;
         }
+
+        public IList<Book> GetBooks()
+        {
+            if(_context.Books != null)
+            {
+                return _context.Books.ToList();
+            }
+            return new List<Book>();
+        }
+
         
         public IList<Librarian> GetLibrarians()
         {
