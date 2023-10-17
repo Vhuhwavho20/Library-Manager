@@ -29,10 +29,15 @@ background-color: #f1f1f1;
 }
 </style>
 
+<div>
+<form method="post">
+<label for="gsearch">Search Book:</label>
+<input asp-for="searchquery" type="text" id="gsearch">
+<button type="submit">Submit</button>
+</form>
+</div>
 
-
-
-<div class="text-center">
+<div class="text-center" style="height: 200px; overflow-y: scroll;">
     @foreach(var book in Model.BookList){
     <button type="button" class="collapsible">@book.book_title</button>
     <div class="content">
