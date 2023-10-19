@@ -24,16 +24,18 @@ namespace LibraryWeb.Pages
         return Page();
     }
     List<Book> books = _service.GetBooks().ToList();
+    List<Book> searchresult = new List<Book>();
     for(int i = 0; i< books.Count;i++){
         string? book_in_library = books[i].book_title;
         if(book_in_library?.ToLower().IndexOf(searchquery.ToLower())!=-1){
-            Console.WriteLine("FOUND!");
+            searchresult.Add(books[i]);
         }
     }
+    BookList = searchresult;
 
 
     
-    return Redirect("https://example.com/");
+    return Page();
 }
         public void OnGet()
         {
