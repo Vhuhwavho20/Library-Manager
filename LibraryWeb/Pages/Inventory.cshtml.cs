@@ -13,6 +13,15 @@ namespace LibraryWeb.Pages
     [BindProperty]
     public string searchquery{get; set;} = default!;
 
+    [BindProperty]
+    public string num_days {get; set;} = default!;
+
+    [BindProperty]
+    public string borrower_id {get;set;} = default!;
+
+    [BindProperty]
+    public string book_id {get;set;} = default!;
+
     public InventoryModel(LibrarianService service){
         _service = service;
     }

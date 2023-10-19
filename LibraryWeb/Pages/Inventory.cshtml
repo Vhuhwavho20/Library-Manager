@@ -46,15 +46,15 @@ background-color: #f1f1f1;
     }
 </div>
 
-
+<br>
 <div>
 <form method="post">
 <label for="daysnum">Number of days to borrow:</label>
-<input type="text" id="daysnum">
+<input asp-for="num_days" type="number" id="daysnum"><br>
 <label for="borrowerid">Borrower ID:</label>
-<input type="text" id="borrowerid">
+<input asp-for="borrower_id" type="number" id="borrowerid"><br>
 <label for="bookid">Book ID:</label>
-<input type="text" id="bookid">
+<input asp-for="book_id" type="number" id="bookid"><br><br>
 <button type="submit">Allocate Book</button>
 </form>
 </div>
