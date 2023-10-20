@@ -34,14 +34,6 @@ background-color: #f1f1f1;
 <label for="gsearch">Search Book:</label>
 <input asp-for="searchquery" type="text" id="gsearch">
 <button type="submit">Search</button>
-<br>
-<label for="daysnum">Number of days to borrow:</label>
-<input asp-for="num_days" type="number" id="daysnum"><br>
-<label for="borrowerid">Borrower ID:</label>
-<input asp-for="borrower_id" type="number" id="borrowerid"><br>
-<label for="bookid">Book ID:</label>
-<input asp-for="book_id" type="number" id="bookid"><br><br>
-<button type="submit">Allocate Book</button>
 </form>
 </div>
 <br>
@@ -53,8 +45,18 @@ background-color: #f1f1f1;
     </div>
     }
 </div>
-
-
+<br>
+<div>
+    <form method="post">
+        <label for="daysnum">Number of days to borrow:</label>
+<input asp-for="num_days" type="number" id="daysnum"><br>
+<label for="borrowerid">Borrower ID:</label>
+<input asp-for="borrower_id" type="number" id="borrowerid"><br>
+<label for="bookid">Book ID:</label>
+<input asp-for="book_id" type="number" id="bookid"><br><br>
+<button type="submit">Allocate Book</button>
+    </form>
+</div>
 
 
 
