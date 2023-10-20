@@ -10,7 +10,7 @@ public string? book_author{get;set;}
 
 public string? status {get;set;}
 
-public string? assigned_borrower {get;set;}
+public int assigned_borrower {get;set;}
 
 
 }

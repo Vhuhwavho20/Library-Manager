@@ -21,6 +21,14 @@ public class LibrarianService
             }
             return new List<Book>();
         }
+
+        public void updateBook(int id,int borrower_id){
+            if(_context.Books != null){
+                var book = _context.Books.FirstOrDefault(e => e.Id == id);
+                
+            }
+
+        }
         
         public IList<Borrower> GetBorrowers()
         {
