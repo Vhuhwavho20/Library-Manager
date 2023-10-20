@@ -22,6 +22,14 @@ public class LibrarianService
             return new List<Book>();
         }
         
+        public IList<Borrower> GetBorrowers()
+        {
+            if(_context.Borrowers != null)
+            {
+                return _context.Borrowers.ToList();
+            }
+            return new List<Borrower>();
+        }
 
         
         public IList<Librarian> GetLibrarians()

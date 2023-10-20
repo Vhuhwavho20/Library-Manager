@@ -10,5 +10,7 @@ namespace LibraryWeb.Data{
         }
         public DbSet<LibraryWeb.Models.Librarian>? Librarians { get; set; }
         public DbSet<LibraryWeb.Models.Book>? Books{get;set;}
+
+        public DbSet<LibraryWeb.Models.Borrower>? Borrowers{get;set;}
     }
 }

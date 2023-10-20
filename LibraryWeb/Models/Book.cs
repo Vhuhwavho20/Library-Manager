@@ -8,6 +8,9 @@ public string? book_title{get;set;}
 
 public string? book_author{get;set;}
 
-public string? status{get;set;}
+public string? status {get;set;}
+
+public string? assigned_borrower {get;set;}
+
 
 }
