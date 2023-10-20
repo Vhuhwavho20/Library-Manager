@@ -25,9 +25,25 @@ public class LibrarianService
         public void updateBook(int id,int borrower_id){
             if(_context.Books != null){
                 var book = _context.Books.FirstOrDefault(e => e.Id == id);
-                
+                if (book != null)
+                {
+                book.status = "NOT Available";
+                book.assigned_borrower = borrower_id;
+                _context.SaveChanges();
+                }
             }
 
+        }
+
+        public void updateBorrower(int id,int ndays){
+            if(_context.Borrowers != null){
+                var borrower = _context.Borrowers.FirstOrDefault(e => e.Id == id);
+                if (borrower != null)
+                {
+                borrower.penaltiesdue = ndays*30;
+                _context.SaveChanges();
+                }
+            }
         }
         
         public IList<Borrower> GetBorrowers()

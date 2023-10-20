@@ -34,21 +34,7 @@ background-color: #f1f1f1;
 <label for="gsearch">Search Book:</label>
 <input asp-for="searchquery" type="text" id="gsearch">
 <button type="submit">Search</button>
-</form>
-</div>
-
-<div class="text-center" style="height: 200px; overflow-y: scroll;">
-    @foreach(var book in Model.BookList){
-    <button type="button" class="collapsible">@book.book_title</button>
-    <div class="content">
-    <p>@book.Id @book.book_title @book.book_author @book.status</p>
-    </div>
-    }
-</div>
-
 <br>
-<div>
-<form method="post">
 <label for="daysnum">Number of days to borrow:</label>
 <input asp-for="num_days" type="number" id="daysnum"><br>
 <label for="borrowerid">Borrower ID:</label>
@@ -58,6 +44,20 @@ background-color: #f1f1f1;
 <button type="submit">Allocate Book</button>
 </form>
 </div>
+<br>
+<div class="text-center" style="height: 200px; overflow-y: scroll;">
+    @foreach(var book in Model.BookList){
+    <button type="button" class="collapsible">@book.book_title</button>
+    <div class="content">
+    <p>@book.Id @book.book_title @book.book_author @book.status</p>
+    </div>
+    }
+</div>
+
+
+
+
+
 
 
 <script>

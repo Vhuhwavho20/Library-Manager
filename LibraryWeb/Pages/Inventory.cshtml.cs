@@ -30,8 +30,13 @@ namespace LibraryWeb.Pages
 {
     if (searchquery==null)
     {
-        return Page();
+        if(num_days!=null && borrower_id!=null && book_id!=null){
+        _service.updateBook(Int32.Parse(book_id),Int32.Parse(borrower_id));
+        _service.updateBorrower(Int32.Parse(borrower_id),Int32.Parse(num_days));
     }
+        return RedirectToPage("/SuccessfulAllocation");
+    }
+
     List<Book> books = _service.GetBooks().ToList();
     List<Book> searchresult = new List<Book>();
     for(int i = 0; i< books.Count;i++){
@@ -40,8 +45,8 @@ namespace LibraryWeb.Pages
             searchresult.Add(books[i]);
         }
     }
+    
     BookList = searchresult;
-
 
     
     return Page();
