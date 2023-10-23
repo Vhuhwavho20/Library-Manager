@@ -32,7 +32,7 @@ background-color: #f1f1f1;
 <div>
 <form method="post">
 <label for="gsearch">Search Borrower:</label>
-<input type="text" id="gsearch">
+<input asp-for="searchquery" type="text" id="gsearch">
 <button type="submit">Search</button>
 </form>
 </div>
@@ -40,6 +40,6 @@ background-color: #f1f1f1;
 
 <div class="text-center" style="height: 200px; overflow-y: scroll;">
     @foreach(var borrower in Model.BorrowerList){
-    <button type="button" class="collapsible">@borrower.fullname</button><br>
+    <a id="myButton" href="/Message?parameterName=@borrower.Id">@borrower.fullname</a><br>
 }
 </div>
