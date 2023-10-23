@@ -4,10 +4,42 @@
     ViewData["Title"] = "LIBRARY MANAGER-COMMUNICATION";
 }
 
+<style>
+.collapsible {
+background-color: #266af2;
+color: white;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+}
 
+.active, .collapsible:hover {
+background-color: #0d3890;
+}
 
-< class="text-center" style="height: 200px; overflow-y: scroll;">
+.content {
+padding: 0 18px;
+display: none;
+overflow: hidden;
+background-color: #f1f1f1;
+}
+</style>
+
+<div>
+<form method="post">
+<label for="gsearch">Search Borrower:</label>
+<input type="text" id="gsearch">
+<button type="submit">Search</button>
+</form>
+</div>
+<br>
+
+<div class="text-center" style="height: 200px; overflow-y: scroll;">
     @foreach(var borrower in Model.BorrowerList){
-    <button type="button">@borrower.fullname</button>
+    <button type="button" class="collapsible">@borrower.fullname</button><br>
 }
 </div>
