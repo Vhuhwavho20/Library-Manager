@@ -38,7 +38,7 @@ namespace LibraryWeb.Pages
         }
         
     }
-        return Page();
+        return RedirectToPage("/Unsuccessful");
     }
 
     List<Book> books = _service.GetBooks().ToList();

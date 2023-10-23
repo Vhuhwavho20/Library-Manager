@@ -3,3 +3,11 @@
 @{
     ViewData["Title"] = "LIBRARY MANAGER-COMMUNICATION";
 }
+
+
+
+< class="text-center" style="height: 200px; overflow-y: scroll;">
+    @foreach(var borrower in Model.BorrowerList){
+    <button type="button">@borrower.fullname</button>
+}
+</div>
