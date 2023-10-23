@@ -22,16 +22,23 @@ public class LibrarianService
             return new List<Book>();
         }
 
-        public void updateBook(int id,int borrower_id){
+        public bool updateBook(int id,int borrower_id){
             if(_context.Books != null){
                 var book = _context.Books.FirstOrDefault(e => e.Id == id);
                 if (book != null)
                 {
-                book.status = "NOT Available";
-                book.assigned_borrower = borrower_id;
-                _context.SaveChanges();
+                    if(book.status=="Available"){
+                    book.status = "NOT Available";
+                    book.assigned_borrower = borrower_id;
+                    _context.SaveChanges();
+                    return true;
+                    }
+                    return false;
+                
                 }
+                return false;
             }
+            return false;
 
         }
 
