@@ -11,9 +11,21 @@ namespace LibraryWeb.Pages
 
         public Borrower borrower {get;set;} = default!;
 
+        [BindProperty]
+        public string messagetext {get;set;} = default!;
+
         public MessageModel(LibrarianService service){
         _service = service;
     }
+
+        public IActionResult OnPost(){
+            if (messagetext==null){
+                return Page();
+
+            }
+
+            return Page();
+        }
         public void OnGet()
         {
             string? param1 = Request.Query["User"];

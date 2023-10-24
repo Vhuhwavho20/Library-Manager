@@ -4,11 +4,29 @@
     ViewData["Title"] = "LIBRARY MANAGER-MESSAGE";
 }
 
+
+
 <div>
-    THIS IS WHERE COMMUNICATION TAKES PLACE
+<p>@Model.borrower.fullname</p>
+<p>@Model.borrower.phonenumber</p>
+<p>@Model.borrower.penaltiesdue</p>
 </div>
 
-<p>@Model.borrower.fullname</p><br>
-<p>@Model.borrower.phonenumber</p><br>
-<p>@Model.borrower.penaltiesdue</p><br>
+<div style="height: 200px; overflow-y: scroll;">
+    <label>
+        MESSAGES ARE DISPLAYED HERE
+    </label>
+</div>
+
+<div>
+    <form method="post">
+    <label for="message">Message:</label>
+<input asp-for="messagetext" type="text" id="message"><br>
+<button type="submit">Send</button>
+    </form>
+</div>
+
+
+
+
 
