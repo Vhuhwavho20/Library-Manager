@@ -42,6 +42,14 @@ public class LibrarianService
 
         }
 
+        public Borrower getBorrower(int id){
+            if(_context.Borrowers!=null){
+                Borrower? b1 = _context.Borrowers.Find(id);
+                return b1;
+            }
+            return new Borrower();
+        }
+
         public void updateBorrower(int id,int ndays){
             if(_context.Borrowers != null){
                 var borrower = _context.Borrowers.FirstOrDefault(e => e.Id == id);

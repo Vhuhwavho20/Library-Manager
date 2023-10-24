@@ -2,10 +2,13 @@
 @model LibraryWeb.Pages.MessageModel
 @{
     ViewData["Title"] = "LIBRARY MANAGER-MESSAGE";
-    string? parameterValue = Request.Query["User"];
 }
 
 <div>
     THIS IS WHERE COMMUNICATION TAKES PLACE
 </div>
-<p>Parameter Value: @parameterValue</p>
+
+<p>@Model.borrower.fullname</p><br>
+<p>@Model.borrower.phonenumber</p><br>
+<p>@Model.borrower.penaltiesdue</p><br>
+
