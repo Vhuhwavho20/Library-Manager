@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\vhuhw\LibraryProj\Library-Manager\LibraryWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/vhuhw/LibraryProj/Library-Manager/LibraryWeb/Pages/Borrower.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9ycm93ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vhuhw/LibraryProj/Library-Manager/LibraryWeb/Pages/Communication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbXVuaWNhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
