@@ -10,12 +10,4 @@ public class Borrower{
 
     public int penaltiesdue {get;set;}
 
-    public Borrower(string fname,string pnumber,string pword){
-        fullname = fname;
-        phonenumber = pnumber;
-        password = pword;
-        penaltiesdue = 0;
-
-    }
-
 }

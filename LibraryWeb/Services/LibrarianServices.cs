@@ -47,12 +47,13 @@ public class LibrarianService
                 Borrower? b1 = _context.Borrowers.Find(id);
                 return b1;
             }
-            return new Borrower("","","");
+            return new Borrower();
         }
 
-        public void addNewBorrower(string b_name,string b_num,string b_password){ 
+        public void addNewBorrower(Borrower newBorrower){ 
             if(_context.Borrowers!=null){
-                _context.Borrowers.Add(new Borrower(b_name,b_num,b_password));
+                _context.Borrowers.Add(newBorrower);
+                _context.SaveChanges();
             }
             
         }

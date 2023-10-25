@@ -34,8 +34,14 @@ namespace LibraryWeb.Pages
     }
 
     if(borrower_pass==confirm_pass){
-        _service.addNewBorrower(borrower_name,borrower_num,borrower_pass);
-        return RedirectToPage();
+        var newBorrower = new Borrower{
+    fullname = borrower_name,
+    phonenumber = borrower_num,
+    password = borrower_pass,
+    penaltiesdue = 0,
+    };
+        _service.addNewBorrower(newBorrower);
+        return RedirectToPage("/SUComplete");
     }
 
     
