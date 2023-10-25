@@ -30,7 +30,7 @@ namespace LibraryWeb.Pages
 {
     if (searchquery==null)
     {
-        if(num_days!=null && borrower_id!=null && book_id!=null){
+        if(num_days!=null || borrower_id!=null || book_id!=null){
         bool resoltuion = _service.updateBook(Int32.Parse(book_id),Int32.Parse(borrower_id));
         if(resoltuion){
             _service.updateBorrower(Int32.Parse(borrower_id),Int32.Parse(num_days));

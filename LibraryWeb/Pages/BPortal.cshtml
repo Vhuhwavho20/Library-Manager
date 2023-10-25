@@ -1,0 +1,28 @@
+﻿@page
+@model LibraryWeb.Pages.BPortalModel
+@{
+    ViewData["Title"] = "Borrower Portal";
+}
+
+<style>
+.button {
+background-color: #2357e7;
+border: none;
+color: rgb(0, 0, 0);
+padding: 25px 42px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 7px 5px;
+cursor: pointer;
+}
+</style>
+<div class="text-center">
+    <label class = "button">
+        <a class="nav-link text-dark" asp-area="" asp-page="/Inventory">Borrowed Books</a>
+    </label>
+    <label class = "button">
+        <a class="nav-link text-dark" asp-area="" asp-page="/Communication">Communication</a>
+    </label>
+</div>
