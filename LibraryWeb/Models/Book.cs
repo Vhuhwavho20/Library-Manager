@@ -1,5 +1,6 @@
 namespace LibraryWeb.Models;
 
+//Book model for database
 public class Book{
 
 public int Id{get;set;}

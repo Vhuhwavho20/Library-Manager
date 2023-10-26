@@ -3,6 +3,7 @@ using System;
 using LibraryWeb.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryWeb.Migrations
 {
     [DbContext(typeof(LibrarianContext))]
-    partial class LibrarianContextModelSnapshot : ModelSnapshot
+    [Migration("20231026144729_AddMessageTable")]
+    partial class AddMessageTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.12");
@@ -91,9 +94,6 @@ namespace LibraryWeb.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("msg")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("sender")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

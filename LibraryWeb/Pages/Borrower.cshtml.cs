@@ -30,7 +30,7 @@ namespace LibraryWeb.Pages
     List<Borrower> borrowers = _service.GetBorrowers().ToList();
     for(int i = 0; i < borrowers.Count; i++){
         if(name==borrowers[i].fullname && pw==borrowers[i].password){
-            return RedirectToPage("/BPortal");
+            return RedirectToPage("/BPortal",new { id = borrowers[i].Id });
         }
     }
 

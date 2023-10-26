@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int}"
 @model LibraryWeb.Pages.BPortalModel
 @{
     ViewData["Title"] = "Borrower Portal";
@@ -18,9 +18,11 @@ margin: 7px 5px;
 cursor: pointer;
 }
 </style>
+
+
 <div class="text-center">
     <label class = "button">
-        <a class="nav-link text-dark" asp-area="" asp-page="/BorrowedBooks">Borrowed Books</a>
+        <a class="nav-link text-dark" href="/BorrowedBooks?User=@Model.ItemId">Borrowed Books</a>
     </label>
     <label class = "button">
         <a class="nav-link text-dark" asp-area="" asp-page="/Communication">Communication</a>

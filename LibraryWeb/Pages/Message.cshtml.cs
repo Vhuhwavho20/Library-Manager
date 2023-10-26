@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using LibraryWeb.Models;
 using LibraryWeb.Services;
+using Microsoft.AspNetCore.SignalR;
 
 namespace LibraryWeb.Pages
 {
@@ -17,6 +18,7 @@ namespace LibraryWeb.Pages
         public MessageModel(LibrarianService service){
         _service = service;
     }
+
 
         public IActionResult OnPost(){
             if (messagetext==null){

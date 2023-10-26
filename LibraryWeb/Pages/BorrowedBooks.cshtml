@@ -2,6 +2,61 @@
 @model LibraryWeb.Page.BorrowedBooksModel
 @{
     ViewData["Title"] = "Borrower Portal";
+    
 }
 
+<style>
+.collapsible {
+background-color: #266af2;
+color: white;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+}
 
+.active, .collapsible:hover {
+background-color: #0d3890;
+}
+
+.content {
+padding: 0 18px;
+display: none;
+overflow: hidden;
+background-color: #f1f1f1;
+}
+</style>
+
+<div>
+    <p>PENALTIES DUE: R @Model.user.penaltiesdue</p>
+</div>
+
+<div class="text-center" style="height: 200px; overflow-y: scroll;">
+    @foreach(var book in Model.BookList){
+    <button type="button" class="collapsible">@book.book_title</button>
+    <div class="content">
+    <p>@book.book_title @book.book_author</p>
+    </div>
+    }
+</div>
+
+    
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+    content.style.display = "none";
+    } else {
+    content.style.display = "block";
+    }
+});
+}
+</script>

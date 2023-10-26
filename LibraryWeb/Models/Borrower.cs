@@ -1,5 +1,5 @@
 namespace LibraryWeb.Models;
-
+//Borrower model for database
 public class Borrower{
     public int Id{get;set;}
     public string? fullname {get;set;}
