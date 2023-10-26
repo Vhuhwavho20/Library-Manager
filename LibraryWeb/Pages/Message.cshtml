@@ -13,9 +13,9 @@
 </div>
 
 <div style="height: 200px; overflow-y: scroll;">
-    <label>
-        MESSAGES ARE DISPLAYED HERE
-    </label>
+@foreach(var m in Model.messagelist){
+    <p>@m.msg</p>
+    }
 </div>
 
 <div>

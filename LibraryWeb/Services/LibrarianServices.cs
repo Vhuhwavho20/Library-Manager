@@ -23,6 +23,15 @@ public class LibrarianService
             return new List<Book>();
         }
 
+        public IList<Messages> GetMessages()
+        {
+            if(_context.messages != null)
+            {
+                return _context.messages.ToList();
+            }
+            return new List<Messages>();
+        }
+
         //Update status of book in database and return boolean to indicate whether update was successful
         public bool updateBook(int id,int borrower_id){
             if(_context.Books != null){
@@ -62,6 +71,15 @@ public class LibrarianService
             }
             
         }
+
+        public void addNewMessage(Messages messages){ 
+            if(_context.messages!=null){
+                _context.messages.Add(messages);
+                _context.SaveChanges();
+            }
+            
+        }
+
 
         //update the penalties charged to the borrower
         public void updateBorrower(int id,int ndays){
