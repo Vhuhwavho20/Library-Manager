@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\vhuhw\LibraryProj\Library-Manager\LibraryWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/vhuhw/LibraryProj/Library-Manager/LibraryWeb/Pages/BMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQk1lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vhuhw/LibraryProj/Library-Manager/LibraryWeb/Pages/BorrowedBooks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9ycm93ZWRCb29rcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/vhuhw/LibraryProj/Library-Manager/LibraryWeb/Pages/Librarian.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlicmFyaWFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vhuhw/LibraryProj/Library-Manager/LibraryWeb/Pages/LMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTE1lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vhuhw/LibraryProj/Library-Manager/LibraryWeb/Pages/LPortal.cshtml]

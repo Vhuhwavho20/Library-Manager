@@ -1,0 +1,36 @@
+﻿@page
+@model LibrayWeb.Pages.LMessageModel
+@{
+    ViewData["Title"] = "LIBRARY MANAGER-MESSAGE";
+}
+
+
+<style>
+
+.b {background-color: #04AA6D;} /* Green */
+.l {background-color: #2196F3;} /* Blue */
+</style>
+
+<div>
+<p>@Model.borrower.fullname</p>
+<p>@Model.borrower.phonenumber</p>
+<p>@Model.borrower.penaltiesdue</p>
+</div>
+
+<div style="height: 200px; overflow-y: scroll;">
+@foreach(var m in Model.messagelist){
+    @if(m.sender=="BORROWER"){
+    <label class="b">@m.msg</label><br>
+    }else{
+    <label class="l">@m.msg</label><br>
+    }
+    }
+</div>
+
+<div>
+    <form method="post">
+    <label for="message">Message:</label>
+<input asp-for="messagetext" type="text" id="message"><br>
+<button type="submit">Send</button>
+    </form>
+</div>

@@ -1,12 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using LibraryWeb.Models;
 using LibraryWeb.Services;
-using Microsoft.AspNetCore.SignalR;
+using LibraryWeb.Models;
 
-namespace LibraryWeb.Pages
+namespace LibrayWeb.Pages
 {
-    public class MessageModel : PageModel
+    public class LMessageModel : PageModel
     {
         private readonly LibrarianService _service;
 
@@ -17,12 +16,11 @@ namespace LibraryWeb.Pages
         [BindProperty]
         public string messagetext {get;set;} = default!;
 
-        public MessageModel(LibrarianService service){
+        public LMessageModel(LibrarianService service){
         _service = service;
     }
 
-
-        public IActionResult OnPost(){
+     public IActionResult OnPost(){
             if (messagetext==null){
                 return Page();
 
@@ -36,7 +34,7 @@ namespace LibraryWeb.Pages
             var chatMessage = new Messages
         {
             msg = messagetext,
-            sender="BORROWER",
+            sender="LIBRARIAN",
             borrower_id = usr,
             
         };
@@ -60,11 +58,6 @@ namespace LibraryWeb.Pages
             }
 
             messagelist = filteredlist;
-            
-
-            
-            
-
         }
     }
 }

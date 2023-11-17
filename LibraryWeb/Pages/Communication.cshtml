@@ -40,6 +40,6 @@ background-color: #f1f1f1;
 
 <div class="text-center" style="height: 200px; overflow-y: scroll;">
     @foreach(var borrower in Model.BorrowerList){
-    <a id="myButton" href="/Message?User=@borrower.Id">@borrower.fullname</a><br>
+    <a id="myButton" href="/LMessage?User=@borrower.Id">@borrower.fullname</a><br>
 }
 </div>
