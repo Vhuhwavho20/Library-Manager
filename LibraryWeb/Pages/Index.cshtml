@@ -5,16 +5,23 @@
 }
 
 <style>
+.btn.btn__reverse[aria-pressed="true"]
+{
+	background-color: #ffffff;
+	color: #130377;
+}
+
 .button {
 background-color: #2357e7;
 border: none;
-color: rgb(0, 0, 0);
+color: #101010;
 padding: 25px 42px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
 font-size: 16px;
 margin: 7px 5px;
+border-color: transparent;
 cursor: pointer;
 }
 
@@ -26,10 +33,8 @@ cursor: pointer;
     <h2 class="h2">Select the appropriate identifier for you</h2>
     <br>
     <br>
-    <label class = "button">
-        <a class="nav-link text-dark" asp-area="" asp-page="/Librarian">Librarian</a>
-    </label>
-    <label class = "button">
-        <a class="nav-link text-dark" asp-area="" asp-page="/Borrower">Borrower</a>
-    </label>
+        <button class="button" onclick="window.location.href='Librarian'">Librarian</button>
+    
+        <button class="button" onclick="window.location.href='Borrower'">Borrower</button>
+    
 </div>
