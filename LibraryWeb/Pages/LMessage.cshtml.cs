@@ -16,20 +16,26 @@ namespace LibrayWeb.Pages
         [BindProperty]
         public string messagetext {get;set;} = default!;
 
+        [BindProperty]
+
+        public int penalty_update {get;set;} = default!;
+
         public LMessageModel(LibrarianService service){
         _service = service;
     }
 
-     public IActionResult OnPost(){
-            if (messagetext==null){
-                return Page();
-
-            }
+    public IActionResult OnPost(){
             int usr = 0;
             string? param1 = Request.Query["User"];
             if(param1!=null){
                 usr = Int32.Parse(param1);
             }
+            if (messagetext==null){
+                _service.updatePenalty(usr,penalty_update);
+                return RedirectToPage("/SuccessfulAllocation");
+
+            }
+            
 
             var chatMessage = new Messages
         {

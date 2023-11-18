@@ -54,6 +54,39 @@ public class LibrarianService
 
         }
 
+        public void updatePenalty(int id,int pen_update){
+            if(_context.Borrowers != null){
+                var borrower = _context.Borrowers.FirstOrDefault(e => e.Id == id);
+                if (borrower != null)
+                {
+                borrower.penaltiesdue = pen_update;
+                _context.SaveChanges();
+                }
+            }
+        }
+
+
+
+        public bool book_deallocated(int id){
+            if(_context.Books != null){
+                var book = _context.Books.FirstOrDefault(e => e.Id == id);
+                if (book != null)
+                {
+                    //check if book is NOT available
+                    if(book.status=="NOT Available"){
+                    book.status = "Available";
+                    book.assigned_borrower = 0;
+                    _context.SaveChanges();
+                    return true;
+                    }
+                    return false;
+                
+                }
+                return false;
+            }
+            return false;
+        }
+
         //Retrieve a Borrower using their primary key
         public Borrower getBorrower(int id){
             if(_context.Borrowers!=null){
@@ -87,7 +120,7 @@ public class LibrarianService
                 var borrower = _context.Borrowers.FirstOrDefault(e => e.Id == id);
                 if (borrower != null)
                 {
-                borrower.penaltiesdue = borrower.penaltiesdue+ (ndays*30);
+                borrower.penaltiesdue = borrower.penaltiesdue + (ndays*30);
                 _context.SaveChanges();
                 }
             }

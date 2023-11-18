@@ -7,14 +7,26 @@
 
 <style>
 
+.collapsible {
+background-color: #266af2;
+color: white;
+cursor: pointer;
+padding: 18px;
+width: 30%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+}
+
 .b {background-color: #04AA6D;} /* Green */
 .l {background-color: #2196F3;} /* Blue */
 </style>
 
 <div>
-<p>@Model.borrower.fullname</p>
-<p>@Model.borrower.phonenumber</p>
-<p>@Model.borrower.penaltiesdue</p>
+<label class="collapsible">@Model.borrower.fullname</label>
+<label class="collapsible">Phone Number: @Model.borrower.phonenumber</label>
+<label class="collapsible">Penalties Due: R @Model.borrower.penaltiesdue</label>
 </div>
 
 <div style="height: 200px; overflow-y: scroll;">
@@ -32,5 +44,14 @@
     <label for="message">Message:</label>
 <input asp-for="messagetext" type="text" id="message"><br>
 <button type="submit">Send</button>
+    </form>
+</div>
+
+
+<div>
+    <form method="post">
+    <label for="penalty">Update Penalties:</label>
+<input asp-for="penalty_update" type="number" id="penalty"><br>
+<button type="submit">Update</button>
     </form>
 </div>

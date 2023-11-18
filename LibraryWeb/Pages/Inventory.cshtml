@@ -42,9 +42,6 @@ background-color: #f1f1f1;
     <button type="button" class="collapsible">@book.book_title</button>
     <div class="content">
     <p>@book.Id @book.book_title @book.book_author @book.status</p>
-    @if(@book.status=="NOT Available"){
-    <button>DEALLOCATE</button>
-    }
     </div>
     }
 </div>
