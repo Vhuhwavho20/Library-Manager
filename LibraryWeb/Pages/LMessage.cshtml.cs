@@ -32,7 +32,7 @@ namespace LibrayWeb.Pages
             }
             if (messagetext==null){
                 _service.updatePenalty(usr,penalty_update);
-                return RedirectToPage("/SuccessfulAllocation");
+                return RedirectToPage("/AdjustPenalty");
 
             }
             
